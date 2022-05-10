@@ -5,7 +5,7 @@
 Neste projeto, busca-se a reprodução visual dos protótipos feitos no Figma, com créditos totais ao autor no seguinte link:
 https://www.figma.com/community/file/1103328882320354978
 
-Tecnologias utilizadas:
+Tecnologias utilizadas neste projeto:
 Figma
 HTML5
 CSS3
@@ -19,7 +19,7 @@ VS Code
 In this project, the goal is to visually reproduce the prototypes seen in Figma, where the author receives all the credit for the visual representation of the screens:
 https://www.figma.com/community/file/1103328882320354978
 
-Tools utilized:
+Tools utilized in this project:
 Figma
 HTML5
 CSS3
