@@ -6,10 +6,15 @@ Neste projeto, busca-se a reprodução visual dos protótipos feitos no Figma, c
 https://www.figma.com/community/file/1103328882320354978
 
 Tecnologias utilizadas neste projeto:
+
 Figma
+
 HTML5
+
 CSS3
+
 SASS/SCSS
+
 VS Code
 
 # Pomo Project
@@ -20,8 +25,13 @@ In this project, the goal is to visually reproduce the prototypes seen in Figma,
 https://www.figma.com/community/file/1103328882320354978
 
 Tools utilized in this project:
+
 Figma
+
 HTML5
+
 CSS3
+
 SASS/SCSS
+
 VS Code
