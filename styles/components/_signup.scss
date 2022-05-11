@@ -1,0 +1,53 @@
+@import '../abstract/variables';
+
+.title-container {
+    margin-top: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-size: $titleFontSize;
+        margin-bottom: 10vh;
+    }
+}
+
+.main-content {
+    .signup-types {
+        display: flex;
+        flex-direction: column;
+        button {
+            padding: 10px;
+            margin: 2vh auto;
+            width: 20vw;
+            font-family: $mainFont;
+            text-align: center;
+            background-color: white;
+            border: 1px solid lightgrey;
+            border-radius: 25px;
+            cursor: pointer;
+            &:hover {
+                background-color: lightgray;
+                transition: 360ms;
+            }
+        }
+        p {
+            margin: 6vh;
+            color: gray;
+            text-align: center;
+        }
+    }
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 7vh;    
+    p {
+        color: gray;
+        text-align: center;
+        span {
+            color: $primaryColor;
+        }
+    }
+}

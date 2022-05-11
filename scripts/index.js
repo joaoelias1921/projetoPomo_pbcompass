@@ -3,6 +3,10 @@ const img = document.querySelector("img");
 const p = document.querySelector("p");
 
 function nextPage() {
+    if(radioButtons[2].checked){
+        window.location.href = "signup.html";
+    }
+
     if(radioButtons[0].checked){
         img.setAttribute("src", "./images/img-screen2.png");
         img.setAttribute("alt", "Productivity tracking & insights");
