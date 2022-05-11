@@ -1,0 +1,160 @@
+@import '../abstract/variables';
+
+.main-content {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .img-container {
+        padding-top: 2rem;
+        img {
+            height: 65vh;
+        }
+    }
+    .text-container {
+        padding-bottom: 1rem;
+        p {
+            font-size: $textFontSize;
+            text-align: center;
+        }
+    }
+    .navigation {
+        padding-top: 1.3rem;
+        padding-bottom: 1.8rem;
+        display: flex;
+        flex-direction: row;
+
+        a {
+            cursor: default;
+        }
+
+        input {
+            /* Add if not using autoprefixer */
+            -webkit-appearance: none;
+            /* Remove most all native input styles */
+            appearance: none;
+            /* For iOS < 15 */
+            background-color: lightgray;
+            /* Not removed via appearance */
+            margin-left: 1px;
+          
+            font: inherit;
+            color: gray;
+            width: 1em;
+            height: 1em;
+            border: 0.15em solid lightgray;
+            border-radius: 50%;
+            margin: 0 3px 0 3px;
+            transform: translateY(-0.075em);
+          
+            display: grid;
+            place-content: center;
+        }
+          
+        input::before {
+            content: "";
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em var(--form-control-color);
+            /* Windows High Contrast Mode */
+            background-color: #ff6064;
+        }
+
+        input:checked {
+            transform: scale(1);
+            transition: 120ms;
+            width: 2em;
+            height: 0.7em;
+            border-radius: 25%;
+            margin: auto;
+            background-color: #ff6064;
+        }
+          
+        input:checked::before {
+            transform: scale(1);
+            transition: 120ms;
+            width: 2em;
+            height: 0.7em;
+            border-radius: 25%;
+            margin: auto;
+            background-color: #ff6064;
+        }
+    }
+    .button-container {
+        padding-top: 0.5rem;
+        button {
+            width: 25vw;
+            height: 5.5vh;
+            background-color: $primaryColor;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            outline: none;
+            &:hover {
+                background-color: $primaryColor/1.2;
+                box-shadow: 0 3px 3px black;
+                transition: 320ms ease-in-out;
+            }
+        }        
+    }
+}
+
+@media screen and (max-width: 912px) {
+    .main-content {
+        .text-container {
+            p {
+                margin: auto;
+                padding: 10px;
+                font-size: $textFontSize*1.2;
+            }
+        }
+
+        .button-container {
+            button {
+                width: 50vw;
+            }
+        }
+    }
+
+    .img-container {
+        padding: 40px;
+        margin-top: 10vh;
+        img {
+            max-width: 70vw;
+            max-height: 40vh;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-content {
+        .text-container {
+            p {
+                margin: auto;
+                padding: 10px;
+                font-size: $textFontSize*1.6;
+            }
+        }
+
+        .button-container {
+            button {
+                width: 80vw;
+            }
+        }
+    }
+
+    .img-container {
+        padding: 40px;
+        margin-top: 3vh;
+        img {
+            max-width: 75vw;
+            max-height: 40vh;
+        }
+    }
+}

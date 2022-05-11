@@ -7,13 +7,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <title>Pomo</title>
 </head>
 <body>
-    <header>
-        
-    </header>
+    <main>
+        <section class="main-content">
+            <figure class="img-container">
+                <img src="./images/img-screen1.png" alt="Tasks & Work Management">
+            </figure>
+
+            <div class="text-container">
+                <p>Easy task & work management with pomo</p>
+            </div>
+            
+            <div class="navigation">
+                <input type="radio" onclick="changePage()" name="screen1" checked>
+                <input type="radio" onclick="changePage()" name="screen2">
+                <input type="radio" onclick="changePage()" name="screen3">
+            </div>
+
+            <div class="button-container">
+                <button onclick="nextPage()">Next</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="./scripts/index.js"></script>
 </body>
 </html>

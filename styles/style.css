@@ -1,4 +1,188 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html, body {
   font-family: "Poppins", sans-serif;
+}
+
+.main-content {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-content .img-container {
+  padding-top: 2rem;
+}
+
+.main-content .img-container img {
+  height: 65vh;
+}
+
+.main-content .text-container {
+  padding-bottom: 1rem;
+}
+
+.main-content .text-container p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.main-content .navigation {
+  padding-top: 1.3rem;
+  padding-bottom: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main-content .navigation a {
+  cursor: default;
+}
+
+.main-content .navigation input {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  -moz-appearance: none;
+       appearance: none;
+  /* For iOS < 15 */
+  background-color: lightgray;
+  /* Not removed via appearance */
+  margin-left: 1px;
+  font: inherit;
+  color: gray;
+  width: 1em;
+  height: 1em;
+  border: 0.15em solid lightgray;
+  border-radius: 50%;
+  margin: 0 3px 0 3px;
+  -webkit-transform: translateY(-0.075em);
+          transform: translateY(-0.075em);
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.main-content .navigation input::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 120ms -webkit-transform ease-in-out;
+  transition: 120ms -webkit-transform ease-in-out;
+  transition: 120ms transform ease-in-out;
+  transition: 120ms transform ease-in-out, 120ms -webkit-transform ease-in-out;
+  -webkit-box-shadow: inset 1em 1em var(--form-control-color);
+          box-shadow: inset 1em 1em var(--form-control-color);
+  /* Windows High Contrast Mode */
+  background-color: #ff6064;
+}
+
+.main-content .navigation input:checked {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 120ms;
+  transition: 120ms;
+  width: 2em;
+  height: 0.7em;
+  border-radius: 25%;
+  margin: auto;
+  background-color: #ff6064;
+}
+
+.main-content .navigation input:checked::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 120ms;
+  transition: 120ms;
+  width: 2em;
+  height: 0.7em;
+  border-radius: 25%;
+  margin: auto;
+  background-color: #ff6064;
+}
+
+.main-content .button-container {
+  padding-top: 0.5rem;
+}
+
+.main-content .button-container button {
+  width: 25vw;
+  height: 5.5vh;
+  background-color: #ff6064;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  outline: none;
+}
+
+.main-content .button-container button:hover {
+  background-color: #d55053;
+  -webkit-box-shadow: 0 3px 3px black;
+          box-shadow: 0 3px 3px black;
+  -webkit-transition: 320ms ease-in-out;
+  transition: 320ms ease-in-out;
+}
+
+@media screen and (max-width: 912px) {
+  .main-content .text-container p {
+    margin: auto;
+    padding: 10px;
+    font-size: 1.44rem;
+  }
+  .main-content .button-container button {
+    width: 50vw;
+  }
+  .img-container {
+    padding: 40px;
+    margin-top: 10vh;
+  }
+  .img-container img {
+    max-width: 70vw;
+    max-height: 40vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-content .text-container p {
+    margin: auto;
+    padding: 10px;
+    font-size: 1.92rem;
+  }
+  .main-content .button-container button {
+    width: 80vw;
+  }
+  .img-container {
+    padding: 40px;
+    margin-top: 3vh;
+  }
+  .img-container img {
+    max-width: 75vw;
+    max-height: 40vh;
+  }
 }
 /*# sourceMappingURL=style.css.map */
