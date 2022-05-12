@@ -93,7 +93,7 @@
             height: 5.5vh;
             background-color: $primaryColor;
             border: none;
-            border-radius: 20px;
+            border-radius: 35px;
             color: white;
             outline: none;
             &:hover {
@@ -109,8 +109,6 @@
     .main-content {
         .text-container {
             p {
-                margin: auto;
-                padding: 10px;
                 font-size: $textFontSize*1.2;
             }
         }
@@ -123,7 +121,6 @@
     }
 
     .img-container {
-        padding: 40px;
         margin-top: 10vh;
         img {
             max-width: 70vw;

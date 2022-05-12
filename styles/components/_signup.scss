@@ -1,13 +1,29 @@
 @import '../abstract/variables';
 
 .title-container {
-    margin-top: 12vh;
+    margin-top: 5vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    .back-arrow {
+        align-self: flex-start;
+        a {
+            i {
+                font-size: 3rem;
+                margin-left: 4vw;
+                color: black;
+                &:hover {
+                    color: $primaryColor;
+                    transition: 360ms;
+                }
+            }
+        }  
+    }
+    
     h1 {
-        font-size: $titleFontSize;
-        margin-bottom: 10vh;
+        font-size: $titleFontSize*0.8;
+        margin-bottom: 7vh;
     }
 }
 
@@ -15,26 +31,56 @@
     .signup-types {
         display: flex;
         flex-direction: column;
-        button {
-            padding: 10px;
-            margin: 2vh auto;
-            width: 20vw;
-            font-family: $mainFont;
-            text-align: center;
-            background-color: white;
-            border: 1px solid lightgrey;
-            border-radius: 25px;
-            cursor: pointer;
-            &:hover {
-                background-color: lightgray;
-                transition: 360ms;
-            }
+        a {
+            text-decoration: none;
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                margin: 2vh auto;
+                width: 20vw;
+                font-family: $mainFont;
+                text-align: center;
+                text-decoration: none;
+                background-color: white;
+                border: 1px solid lightgrey;
+                border-radius: 25px;
+                cursor: pointer;
+                &:hover {
+                    background-color: lightgray;
+                    transition: 360ms;
+                }
+                img {
+                    width: 1.6vw;
+                    padding-top: 2px;
+                    margin-right: 10px;
+                }
+            }        
         }
         p {
             margin: 6vh;
             color: gray;
             text-align: center;
         }
+    }
+    .signin-button {
+        padding-top: 0.5rem;
+        button {
+            width: 25vw;
+            height: 5.5vh;
+            font-size: $textFontSize*0.8;
+            background-color: $primaryColor;
+            border: none;
+            border-radius: 35px;
+            color: white;
+            outline: none;
+            &:hover {
+                background-color: $primaryColor/1.2;
+                box-shadow: 0 3px 3px black;
+                transition: 320ms ease-in-out;
+            }
+        }  
     }
 }
 
@@ -46,8 +92,100 @@
     p {
         color: gray;
         text-align: center;
-        span {
+        font-size: 0.9rem;
+        a {
             color: $primaryColor;
+            text-decoration: none;
+            &:hover {
+                color: $primaryColor/1.5;
+                transition: 480ms;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 912px) {
+    .title-container {
+        .back-arrow {
+            a {
+                i {
+                    font-size: 1.3rem;
+                    margin-left: 5.5vw;
+                    margin-bottom: 9vh;
+                }
+            }
+        }
+        h1 {
+            font-size: $titleFontSize*0.7;
+        }
+    }
+
+    .main-content {
+        .signup-types {
+            a {
+                button {
+                    width: fit-content;
+                    font-size: 0.9rem;
+                    img {
+                        width: 2vw;
+                    }
+                }
+            }
+            p {
+                font-size: $textFontSize*0.8;
+            }            
+        }
+        .signin-button {
+            button {
+                width: 40vw;
+                font-size: $textFontSize*0.8;
+            }
+        }
+    }
+
+    .footer-content {
+        p {
+            font-size: $textFontSize*0.7;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title-container {
+        .back-arrow {
+            a {
+                i {
+                    font-size: 1.2rem;
+                    margin-left: 5.5vw;
+                    margin-bottom: 9vh;
+                }
+            }
+        }
+        h1 {
+            font-size: $titleFontSize*0.8;
+        }
+    }
+
+    .main-content {
+        .signup-types {
+            a {
+                button {
+                    width: 70vw;
+                    font-size: $textFontSize*0.8;
+                    img {
+                        width: 5vw;
+                    }
+                }
+            }
+            p {
+                font-size: $textFontSize;
+            }
+        }
+        .signin-button {
+            button {
+                width: 80vw;
+                font-size: $textFontSize*0.8;
+            }
         }
     }
 }

@@ -7,25 +7,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4693415175.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <title>Pomo - Sign Up</title>
 </head>
 <body>
     <header class="title-container">
+        <div class="back-arrow">
+            <a href="./index.html">
+                <i class="fa-solid fa-arrow-left"></i>           
+            </a>
+        </div>
+        
         <h1>Let's you in</h1>
     </header>
 
     <main>
         <section class="main-content">            
             <div class="signup-types">
-                <a href="https://www.facebook.com"><button>Continue with Facebook</button></a>
-                <a href="https://www.google.com"><button>Continue with Google</button></a>
-                <a href="https://www.apple.com"><button>Continue with Apple</button></a>
+                <a href="https://www.facebook.com"><button><img src="./images/fb-logo.png" alt="Facebook">Continue with Facebook</button></a>
+                <a href="https://www.google.com"><button><img src="./images/google-logo.png" alt="Facebook">Continue with Google</button></a>
+                <a href="https://www.apple.com"><button><img src="./images/apple-logo.png" alt="Facebook">Continue with Apple</button></a>
                 <p>or</p>
             </div>
 
-            <div class="button-container">
+            <div class="signin-button">
                 <button>Sign in with password</button>
             </div>
         </section>
@@ -33,7 +40,7 @@
 
     <footer>
         <div class="footer-content">
-            <p>Don't have an account? <span>Sign up</span></p>
+            <p>Don't have an account? <a href="#">Sign up</a></p>
         </div>        
     </footer>
 </body>

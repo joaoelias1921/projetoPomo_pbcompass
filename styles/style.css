@@ -135,7 +135,7 @@ html, body {
   height: 5.5vh;
   background-color: #ff6064;
   border: none;
-  border-radius: 20px;
+  border-radius: 35px;
   color: white;
   outline: none;
 }
@@ -150,15 +150,12 @@ html, body {
 
 @media screen and (max-width: 912px) {
   .main-content .text-container p {
-    margin: auto;
-    padding: 10px;
     font-size: 1.44rem;
   }
   .main-content .button-container button {
     width: 50vw;
   }
   .img-container {
-    padding: 40px;
     margin-top: 10vh;
   }
   .img-container img {
@@ -187,10 +184,14 @@ html, body {
 }
 
 .title-container {
-  margin-top: 12vh;
+  margin-top: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -199,9 +200,26 @@ html, body {
           align-items: center;
 }
 
-.title-container h1 {
+.title-container .back-arrow {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.title-container .back-arrow a i {
   font-size: 3rem;
-  margin-bottom: 10vh;
+  margin-left: 4vw;
+  color: black;
+}
+
+.title-container .back-arrow a i:hover {
+  color: #ff6064;
+  -webkit-transition: 360ms;
+  transition: 360ms;
+}
+
+.title-container h1 {
+  font-size: 2.4rem;
+  margin-bottom: 7vh;
 }
 
 .main-content .signup-types {
@@ -214,28 +232,71 @@ html, body {
           flex-direction: column;
 }
 
-.main-content .signup-types button {
+.main-content .signup-types a {
+  text-decoration: none;
+}
+
+.main-content .signup-types a button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px;
   margin: 2vh auto;
   width: 20vw;
   font-family: "Poppins", sans-serif;
   text-align: center;
+  text-decoration: none;
   background-color: white;
   border: 1px solid lightgrey;
   border-radius: 25px;
   cursor: pointer;
 }
 
-.main-content .signup-types button:hover {
+.main-content .signup-types a button:hover {
   background-color: lightgray;
   -webkit-transition: 360ms;
   transition: 360ms;
+}
+
+.main-content .signup-types a button img {
+  width: 1.6vw;
+  padding-top: 2px;
+  margin-right: 10px;
 }
 
 .main-content .signup-types p {
   margin: 6vh;
   color: gray;
   text-align: center;
+}
+
+.main-content .signin-button {
+  padding-top: 0.5rem;
+}
+
+.main-content .signin-button button {
+  width: 25vw;
+  height: 5.5vh;
+  font-size: 0.96rem;
+  background-color: #ff6064;
+  border: none;
+  border-radius: 35px;
+  color: white;
+  outline: none;
+}
+
+.main-content .signin-button button:hover {
+  background-color: #d55053;
+  -webkit-box-shadow: 0 3px 3px black;
+          box-shadow: 0 3px 3px black;
+  -webkit-transition: 320ms ease-in-out;
+  transition: 320ms ease-in-out;
 }
 
 .footer-content {
@@ -254,9 +315,72 @@ html, body {
 .footer-content p {
   color: gray;
   text-align: center;
+  font-size: 0.9rem;
 }
 
-.footer-content p span {
+.footer-content p a {
   color: #ff6064;
+  text-decoration: none;
+}
+
+.footer-content p a:hover {
+  color: #aa4043;
+  -webkit-transition: 480ms;
+  transition: 480ms;
+}
+
+@media screen and (max-width: 912px) {
+  .title-container .back-arrow a i {
+    font-size: 1.3rem;
+    margin-left: 5.5vw;
+    margin-bottom: 9vh;
+  }
+  .title-container h1 {
+    font-size: 2.1rem;
+  }
+  .main-content .signup-types a button {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 0.9rem;
+  }
+  .main-content .signup-types a button img {
+    width: 2vw;
+  }
+  .main-content .signup-types p {
+    font-size: 0.96rem;
+  }
+  .main-content .signin-button button {
+    width: 40vw;
+    font-size: 0.96rem;
+  }
+  .footer-content p {
+    font-size: 0.84rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title-container .back-arrow a i {
+    font-size: 1.2rem;
+    margin-left: 5.5vw;
+    margin-bottom: 9vh;
+  }
+  .title-container h1 {
+    font-size: 2.4rem;
+  }
+  .main-content .signup-types a button {
+    width: 70vw;
+    font-size: 0.96rem;
+  }
+  .main-content .signup-types a button img {
+    width: 5vw;
+  }
+  .main-content .signup-types p {
+    font-size: 1.2rem;
+  }
+  .main-content .signin-button button {
+    width: 80vw;
+    font-size: 0.96rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

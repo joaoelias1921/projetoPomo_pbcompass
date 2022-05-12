@@ -49,8 +49,8 @@ function changePage() {
                 radioButtons[0].checked = false;
                 radioButtons[1].checked = false;
                 radioButtons[2].checked = true;
-                document.querySelector("button").innerHTML = "Get Started"; 
+                document.querySelector("button").innerHTML = "Get Started";
             }
         });                           
-    }             
+    }   
 }
